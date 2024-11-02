@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> SADAKO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+    <body>
+    <div class="container">
+      <div class="card-header text-center font-weight-bold">
+        <h2>
+          Sistem Aplikasi Data Pemeriksaan Online (SADAKO) <br />
+          BPJS Kesehatan Cabang Jakarta Utara
+        </h2>
+      </div>
+      <h6>
+        <p>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1O7SE0lFx8Io2dIZjkDzocye2nUsuKlbKQ21q4dALhBY/edit?hl=id&gid=2070164376#gid=2070164376"
+            target="_blank"
+            >Contoh berkas pemeriksaan dapat diakses pada link berikut
+          </a>
+        </p>
+      </h6>
+    <div class="content">
+    <div class="user-details">
+        <div class="input-box">
+          <form id="uploadForm" action="https://script.google.com/macros/s/AKfycbzVnfi7oKeEwWqgdA5vVwlf4lu-zBrhIet8PiqeF5cADe9JkI3sIEev7AHaq47UyTd-/exec" method="POST">
+          <input type="hidden" value="" name="fileContent" id="fileContent">
+          <input type="hidden" value="" name="filename" id="filename">
+          <div class="user-details">
+          <div class="input-box">
+             <label for="namabu" class="form-label">Nama Badan Usaha</b> <br />Tuliskan nama badan usaha
+              <b>TANPA</b> menggunakan "PT/CV/Yayasan/dsb" contoh: PT Sukses
+              Maju, maka cukup dituliskan "Sukses Maju"</label>
+              <input type="text" id="namabu" name="namabu" class="form-control" placeholder="Masukan nama badan usaha" required>
+          </div>
+          <div class="input-box">
+            <label for="kodebu" class="form-label">Kode Badan Usaha</label>
+              <input type="text" id="kodebu" name="kodebu" class="form-control" placeholder="Masukan kode badan usaha" required>
+            </div>
+        <div class="input-box">
+            <label for="ro" class="form-label">Relationship Officer</label>
+            <select type="ro" id="ro" name="ro" class="form-control" placeholder="Pilih Relationship Officer " required>
+              <option>Pilih :</option>
+              <option value="Fajar">Fajar +62 811896605</option>
+              <option value="Maya">Maya +62 8119233349</option>
+              <option value="Zulfa">Zulfa +62 8118994550</option>
+              <option value="Dara">Dara +62 8111707242</option>
+              <option value="Lia">Lia +62 8119552626</option>
+              <option value="Irfan">Irfan +62 8119797833</option>
+              <option value="Made">Made +62 81222423999</option>
+              <option value="Ikhsan">Ikhsan +62 8118121190</option>
+              <option value="Naufal">Naufal +62 81110001065</option>
+              <option value="Indah">Indah +62 8111461141</option>
+              <option value="Uti">Uti +62 8111240210</option>
+              <option value="Faldy">Faldy +62 81215314400</option>
+              <option value="Tika">Tika +62 81285529592</option>
+            </select>
+            </div>
+            <div class="input-box">
+              <label for="picbu" class="form-label">Nama PIC Badan Usaha</label>
+                <input type="text" id="picbu" name="picbu" class="form-control" placeholder="Nama PIC badan usaha" required>
+              </div>
+              <div class="input-box">
+                <label for="kontak" class="form-label">No. Handphone PIC Badan Usaha</label>
+                  <input type="text" id="kontak" name="kontak" class="form-control" placeholder="Masukan No Handphone PIC Badan Usaha " required>
+                </div> 
+                <div class="input-box">
+                  <label for="email" class="form-label">Email PIC Badan Usaha</label>
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Masukan Email PIC Badan Usaha " required>
+                  </div>
+                  <div class="input-box">
+                    <label for="p_terdaftar" class="form-label">Jumlah Pekerja Terdaftar BPJS Kesehatan Badan Usaha</label>
+                      <input type="text" id="p_terdaftar" name="p_terdaftar" class="form-control" placeholder="Masukan Jumlah Pekerja Terdaftar" required>
+                    </div>
+                    <div class="input-box">
+                      <label for="p_belumterdaftar" class="form-label">Jumlah Pekerja Belum Terdaftar BPJS Kesehatan Badan Usaha</label>
+                        <input type="text" id="p_belumterdaftar" name="p_belumterdaftar" class="form-control" placeholder="Masukan Jumlah Pekerja Belum Terdaftar" required>
+                      </div>
+                      <div class="input-box">
+                        <label for="p_wlk" class="form-label">Jumlah Pekerja Wajib Lapor Ketenagakerjaan (WLK)</label>
+                          <input type="text" id="p_wlk" name="p_wlk" class="form-control" placeholder="Masukan Jumlah Pekerja WLK" required>
+                        </div>
+        <div class="input-box">
+            <label for="keterangan" class="form-label">Keterangan</label>
+              <input type="textarea" id="keterangan" name="keterangan" class="form-control" placeholder="" required>
+            </div>
+
+            </form>
+        <div class="input-box">
+            <label for="file" class="form-label"> File</label>
+            <input required id="attach" name="attach" type="file"/>
+            </div>
+        <div class="button"style="width: 100%;">
+            <input type="button" value="KIRIM DATA" onclick="UploadFile();" />
+            </div>
+            <div>
+       <button class="btn btn-danger" type="reset">RESET FORM</button>
+           </div>
+    <script>
+    function UploadFile() {
+    var reader = new FileReader();
+    var file = document.getElementById('attach').files[0];
+    reader.onload = function(){
+    document.getElementById('fileContent').value=reader.result;
+    document.getElementById('filename').value=file.name;
+    document.getElementById('uploadForm').submit();
+    }
+    reader.readAsDataURL(file);
+    }
+    </script>
+</body>
+</html>
